@@ -7,4 +7,6 @@ export default buildRoutes(function() {
   });
 
   this.route('post', { path: 'post/:id'});
+
+  this.mount('admin', { path: '/admin' });
 });
