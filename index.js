@@ -1,5 +1,8 @@
 'use strict';
 
-module.exports = {
-  name: 'ember-blog-motor'
-};
+const EngineAddon = require('ember-engines/lib/engine-addon');
+
+module.exports = EngineAddon.extend({
+  name: 'ember-blog-motor',
+  lazyLoading: false
+});
