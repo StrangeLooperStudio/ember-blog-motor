@@ -1,0 +1,30 @@
+body {
+  max-width: 80vw;
+  margin: auto;
+  background-color: #FFFDF9;
+  font-family: sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #865931;
+}
+
+a:hover {
+  color: #dd6a58;
+}
+
+h1,h2 {
+  background-color: #E04E39;
+  color: white;
+  padding: 1rem;
+}
+
+input, textarea {
+  width: 50vw;
+  margin: 1rem;
+}
+
+textarea {
+  height: 10rem;
+}

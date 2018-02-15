@@ -1,7 +1,13 @@
-<h2 id="title">Welcome to Ember-Blog-Motor</h2>
-
-{{ember-blog-motor/last-post}}
+<h1 id="title">Welcome to Ember-Blog-Motor - Dummy App</h1>
+<nav>
+  <ul>
+    <li>
+      {{#link-to "index"}}Dummy Index{{/link-to}}
+    </li>
+    <li>
+      {{#link-to "ember-blog-motor.index"}}blog{{/link-to}}
+    </li>
+  </ul>
+</nav>
 
 {{outlet}}
-
-{{#link-to "ember-blog-motor.index"}}blog{{/link-to}}

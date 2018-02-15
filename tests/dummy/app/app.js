@@ -15,6 +15,13 @@ const App = Application.extend({
           'store'
         ]
       }
+    },
+    emberBlogMotorAdmin: {
+      dependencies: {
+        services: [
+          'store'
+        ]
+      }
     }
   }
 });

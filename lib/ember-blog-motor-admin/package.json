@@ -1,11 +1,12 @@
 {
-  "name": "admin",
+  "name": "ember-blog-motor-admin",
   "keywords": [
     "ember-addon",
     "ember-engine"
   ],
   "dependencies": {
     "ember-cli-htmlbars": "*",
-    "ember-cli-babel": "*"
+    "ember-cli-babel": "*",
+    "ember-cli-showdown": "*"
   }
 }

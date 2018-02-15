@@ -21,7 +21,8 @@
   },
   "dependencies": {
     "ember-cli-babel": "^6.6.0",
-    "ember-cli-htmlbars": "^2.0.1"
+    "ember-cli-htmlbars": "^2.0.1",
+    "ember-cli-showdown": "^4.1.1"
   },
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.5",
@@ -31,7 +32,7 @@
     "ember-cli-eslint": "^4.2.1",
     "ember-cli-htmlbars-inline-precompile": "^1.0.0",
     "ember-cli-inject-live-reload": "^1.4.1",
-    "ember-cli-mirage": "^0.4.1",
+    "ember-cli-mirage": "jeloba/ember-cli-mirage#patch-1",
     "ember-cli-qunit": "^4.1.1",
     "ember-cli-shims": "^1.2.0",
     "ember-cli-sri": "^2.1.0",
@@ -43,12 +44,13 @@
     "ember-load-initializers": "^1.0.0",
     "ember-maybe-import-regenerator": "^0.1.6",
     "ember-resolver": "^4.0.0",
-    "ember-source": "~3.0.0-beta.6",
+    "ember-source": "~3.0.0",
     "ember-source-channel-url": "^1.0.1",
     "ember-try": "^0.2.23",
     "eslint-plugin-ember": "^5.0.0",
     "eslint-plugin-node": "^5.2.1",
-    "loader.js": "^4.2.3"
+    "loader.js": "^4.2.3",
+    "normalize.css": "^8.0.0"
   },
   "engines": {
     "node": "^4.5 || 6.* || >= 7.*"
@@ -56,7 +58,7 @@
   "ember-addon": {
     "configPath": "tests/dummy/config",
     "paths": [
-      "lib/admin"
+      "lib/ember-blog-motor-admin"
     ]
   }
 }
