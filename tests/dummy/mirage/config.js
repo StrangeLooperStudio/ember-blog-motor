@@ -23,4 +23,16 @@ export default function() {
 
     http://www.ember-cli-mirage.com/docs/v0.3.x/shorthands/
   */
+  //this.namespace = 'api';
+  this.get('/posts', ({ posts }, request) => {
+    if(request.queryParams.published === 'latest') {
+      return posts.all().sort((a,b)=>a.published <= b.published).models[0];
+    } else {
+      return posts.all();
+    }
+  });
+  this.post('/posts');
+  this.get('/posts/:id');
+  this.put('/posts/:id');
+  this.del('/posts/:id');
 }

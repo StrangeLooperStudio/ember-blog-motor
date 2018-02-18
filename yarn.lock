@@ -167,6 +167,14 @@ aot-test-generators@^0.1.0:
   dependencies:
     jsesc "^2.5.0"
 
+applause@1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/applause/-/applause-1.2.2.tgz#a8468579e81f67397bb5634c29953bedcd0f56c0"
+  dependencies:
+    cson-parser "^1.1.0"
+    js-yaml "^3.3.0"
+    lodash "^3.10.0"
+
 aproba@^1.0.3:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/aproba/-/aproba-1.2.0.tgz#6802e6264efd18c790a1b0d517f0f2627bf2c94a"
@@ -1398,7 +1406,7 @@ broccoli-node-info@1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/broccoli-node-info/-/broccoli-node-info-1.1.0.tgz#3aa2e31e07e5bdb516dd25214f7c45ba1c459412"
 
-broccoli-persistent-filter@^1.0.3, broccoli-persistent-filter@^1.1.5, broccoli-persistent-filter@^1.1.6, broccoli-persistent-filter@^1.4.0, broccoli-persistent-filter@^1.4.2, broccoli-persistent-filter@^1.4.3:
+broccoli-persistent-filter@^1.0.3, broccoli-persistent-filter@^1.1.5, broccoli-persistent-filter@^1.1.6, broccoli-persistent-filter@^1.2.0, broccoli-persistent-filter@^1.4.0, broccoli-persistent-filter@^1.4.2, broccoli-persistent-filter@^1.4.3:
   version "1.4.3"
   resolved "https://registry.yarnpkg.com/broccoli-persistent-filter/-/broccoli-persistent-filter-1.4.3.tgz#3511bc52fc53740cda51621f58a28152d9911bc1"
   dependencies:
@@ -1433,6 +1441,14 @@ broccoli-plugin@^1.0.0, broccoli-plugin@^1.1.0, broccoli-plugin@^1.2.0, broccoli
     quick-temp "^0.1.3"
     rimraf "^2.3.4"
     symlink-or-copy "^1.1.8"
+
+broccoli-replace@^0.12.0:
+  version "0.12.0"
+  resolved "https://registry.yarnpkg.com/broccoli-replace/-/broccoli-replace-0.12.0.tgz#36460a984c45c61731638c53068b0ab12ea8fdb7"
+  dependencies:
+    applause "1.2.2"
+    broccoli-persistent-filter "^1.2.0"
+    minimatch "^3.0.0"
 
 broccoli-rollup@^1.2.0:
   version "1.3.0"
@@ -1844,6 +1860,10 @@ code-point-at@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/code-point-at/-/code-point-at-1.1.0.tgz#0d070b4d043a5bea33a2f1a40e2edb3d9a4ccf77"
 
+coffee-script@^1.10.0:
+  version "1.12.7"
+  resolved "https://registry.yarnpkg.com/coffee-script/-/coffee-script-1.12.7.tgz#c05dae0cb79591d05b3070a8433a98c9a89ccc53"
+
 collection-visit@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/collection-visit/-/collection-visit-1.0.0.tgz#4bc0373c164bc3291b4d368c829cf1a80a59dca0"
@@ -2067,6 +2087,12 @@ cryptiles@2.x.x:
 crypto-random-string@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/crypto-random-string/-/crypto-random-string-1.0.0.tgz#a230f64f568310e1498009940790ec99545bca7e"
+
+cson-parser@^1.1.0:
+  version "1.3.5"
+  resolved "https://registry.yarnpkg.com/cson-parser/-/cson-parser-1.3.5.tgz#7ec675e039145533bf2a6a856073f1599d9c2d24"
+  dependencies:
+    coffee-script "^1.10.0"
 
 currently-unhandled@^0.4.1:
   version "0.4.1"
@@ -2380,15 +2406,16 @@ ember-cli-lodash-subset@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/ember-cli-lodash-subset/-/ember-cli-lodash-subset-2.0.1.tgz#20cb68a790fe0fde2488ddfd8efbb7df6fe766f2"
 
-ember-cli-mirage@jeloba/ember-cli-mirage#patch-1:
-  version "0.3.4"
-  resolved "https://codeload.github.com/jeloba/ember-cli-mirage/tar.gz/33f7f194bd03bd9a820b14360c41874bdf93e34f"
+ember-cli-mirage@mattmarcum/ember-cli-mirage#patch-1:
+  version "0.4.1"
+  resolved "https://codeload.github.com/mattmarcum/ember-cli-mirage/tar.gz/19b097550627e2027037b2593be7fb4548e83d18"
   dependencies:
     broccoli-funnel "^1.0.2"
     broccoli-merge-trees "^1.1.0"
+    broccoli-replace "^0.12.0"
     broccoli-stew "^1.5.0"
     chalk "^1.1.1"
-    ember-cli-babel "^6.6.0"
+    ember-cli-babel "^6.8.2"
     ember-cli-node-assets "^0.1.4"
     ember-get-config "^0.2.2"
     ember-inflector "^2.0.0"
@@ -2396,7 +2423,7 @@ ember-cli-mirage@jeloba/ember-cli-mirage#patch-1:
     exists-sync "0.0.3"
     fake-xml-http-request "^1.4.0"
     faker "^3.0.0"
-    pretender "^1.5.1"
+    pretender "^1.6.1"
     route-recognizer "^0.2.3"
 
 ember-cli-node-assets@^0.1.4:
@@ -2763,9 +2790,9 @@ ember-source-channel-url@^1.0.1:
   dependencies:
     got "^8.0.1"
 
-ember-source@~3.0.0-beta.6:
-  version "3.0.0-beta.6"
-  resolved "https://registry.yarnpkg.com/ember-source/-/ember-source-3.0.0-beta.6.tgz#e8042c1781de4f125993bb41b067cb32fc61c419"
+ember-source@~3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/ember-source/-/ember-source-3.0.0.tgz#51811cae98d2ceec53bcfbaa876d02b2b5b2159f"
   dependencies:
     broccoli-funnel "^2.0.1"
     broccoli-merge-trees "^2.0.0"
@@ -4364,7 +4391,7 @@ js-tokens@^3.0.0, js-tokens@^3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-3.0.2.tgz#9866df395102130e38f7f996bceb65443209c25b"
 
-js-yaml@^3.2.5, js-yaml@^3.2.7, js-yaml@^3.6.1, js-yaml@^3.9.1:
+js-yaml@^3.2.5, js-yaml@^3.2.7, js-yaml@^3.3.0, js-yaml@^3.6.1, js-yaml@^3.9.1:
   version "3.10.0"
   resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.10.0.tgz#2e78441646bd4682e963f22b6e92823c309c62dc"
   dependencies:
@@ -5674,7 +5701,7 @@ preserve@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/preserve/-/preserve-0.2.0.tgz#815ed1f6ebc65926f865b310c0713bcb3315ce4b"
 
-pretender@^1.5.1:
+pretender@^1.6.1:
   version "1.6.1"
   resolved "https://registry.yarnpkg.com/pretender/-/pretender-1.6.1.tgz#77d1e42ac8c6b298f5cd43534a87645df035db8c"
   dependencies:
