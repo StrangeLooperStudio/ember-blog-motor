@@ -1,0 +1,13 @@
+<h3>New</h3>
+<div class="post-editor">
+  <div class="post-editor__editor">
+    Title:<br/>
+    {{input value=postTitle}}<br />
+    Body:<br/>
+    {{textarea value=postBody}}
+  </div>
+  <div class="post-editor__preview">
+    <h3>{{postTitle}}</h3>
+    {{markdown-to-html postBody}}
+  </div>
+</div>
