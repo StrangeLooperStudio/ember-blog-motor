@@ -20,6 +20,18 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+      EmberBlogMotor: {
+        title: 'Ember-Blog-Motor (An Engine Addon)',
+        adminTitle: 'Ember-Blog-Motor-Admin (An Engine In-Repo-Addon (Inside an Addon))',
+        dateFormat: 'L',
+        links: {
+          blogHome: 'Blog Home',
+          allBlogPosts: 'Blog Posts',
+          admin: 'Admin',
+          adminAllPosts: 'Blog Posts',
+          adminNew: 'Create New Post'
+        }
+      }
     }
   };
 

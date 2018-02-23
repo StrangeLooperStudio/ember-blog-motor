@@ -28,3 +28,14 @@ input, textarea {
 textarea {
   height: 10rem;
 }
+
+.post-entry {
+  margin: 1rem auto;
+}
+
+.post-entry header h2 {
+  background-color:inherit;
+  color: black;
+  font-size: 1.5rem;
+  font-weight: bold;
+}

@@ -1,14 +1,14 @@
-<h2>Ember-Blog-Motor (Addon Engine)</h2>
+<h2>{{config.title}}</h2>
 <nav>
   <ul>
     <li>
-      {{#link-to "index"}}Blog Home{{/link-to}}
+      {{#link-to "index"}}{{config.links.blogHome}}{{/link-to}}
     </li>
     <li>
-      {{#link-to "posts"}}Blog Posts{{/link-to}}
+      {{#link-to "posts"}}{{config.links.allBlogPosts}}{{/link-to}}
     </li>
     <li>
-      {{#link-to "ember-blog-motor-admin.index"}}Admin{{/link-to}}
+      {{#link-to "ember-blog-motor-admin.index"}}{{config.links.admin}}{{/link-to}}
     </li>
   </ul>
 </nav>

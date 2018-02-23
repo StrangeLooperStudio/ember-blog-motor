@@ -32,6 +32,7 @@ module.exports = {
       excludedFiles: [
         'app/**',
         'addon/**',
+        'lib/**',
         'tests/dummy/app/**'
       ],
       parserOptions: {

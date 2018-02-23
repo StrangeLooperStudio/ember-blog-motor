@@ -1,11 +1,11 @@
-<h2>Ember-Blog-Motor/Admin (In-repo Addon Engine)</h2>
+<h2>{{config.title}}</h2>
 <nav>
   <ul>
     <li>
-      {{#link-to 'index'}}Admin Posts{{/link-to}}
+      {{#link-to 'index'}}{{config.links.adminAllPosts}}{{/link-to}}
     </li>
     <li>
-      {{#link-to 'new'}}New{{/link-to}}
+      {{#link-to 'new'}}{{config.links.adminNew}}{{/link-to}}
     </li>
   </ul>
 </nav>

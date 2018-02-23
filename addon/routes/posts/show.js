@@ -4,7 +4,7 @@ import { inject as service } from '@ember/service';
 export default Route.extend({
   store: service(),
 
-  model() {
-    return this.store.query('post', { 'is-published': 'all'});
+  model(params) {
+    return this.get('store').findRecord('post', params.post_id );
   }
 });
