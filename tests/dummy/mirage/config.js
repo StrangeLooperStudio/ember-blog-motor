@@ -25,18 +25,17 @@ export default function() {
   */
   //this.namespace = 'api';
   this.get('/users/:id');
-  this.get('/posts', ({ posts }, request) => {
-    if(request.queryParams['is-published'] !== 'all') {
-      posts = posts.all().filter(p => p.isPublished)
-    } else {
-      posts = posts.all()
-    }
+  this.get('/posts', function({ posts }, request) {
+    const defaultPage = { number: 1, size: 10 };
 
-    if(request.queryParams['published-at'] === 'latest') {
-      return posts.sort((a,b)=>a.publishedAt <= b.publishedAt).models[0]
-    } else {
-      return posts
-    }
+    const { number, size } = request.queryParams['page'] || defaultPage;
+    const startIndex = (number - 1) * size;
+
+    const sortedPosts = posts.all().sort((a,b)=>a.publishedAt <= b.publishedAt)
+    let paginatedPosts = this.serialize(sortedPosts.slice(startIndex, size));
+    paginatedPosts.meta = { page: { number, size } };
+
+    return paginatedPosts;
   });
   this.post('/posts')
   this.get('/posts/:id')

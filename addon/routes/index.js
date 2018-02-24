@@ -5,6 +5,6 @@ export default Route.extend({
   store: service(),
 
   model() {
-    return this.get('store').queryRecord('post', { 'published-at': 'latest' });
+    return this.get('store').query('post', { page: { nuber: 1, size: 10 } });
   }
 });
