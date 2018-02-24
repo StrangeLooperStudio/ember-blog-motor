@@ -4,3 +4,17 @@
   <h3 class="post-entry__published-date-time">{{moment-format post.publishedAt dateFormat}}</h3>
 </header>
 <section>{{post.body}}</section>
+<footer>
+  <ul>
+    <li>
+      {{#if post.previousPost}}
+        {{#link-to "posts.show" post.previousPost}}Previous{{/link-to}}
+      {{/if}}
+    </li>
+    <li>
+      {{#if post.nextPost}}
+        {{#link-to "posts.show" post.nextPost}}Next{{/link-to}}
+      {{/if}}
+    </li>
+  </ul>
+</footer>

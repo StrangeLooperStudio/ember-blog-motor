@@ -1,9 +1,4 @@
-import { Factory, faker, association } from 'ember-cli-mirage';
+import { Factory } from 'ember-cli-mirage';
 
-export default Factory.extend({
-  name() { return faker.name.title(); },
-  isAdmin() { return faker.random.boolean(); },
-  afterCreate(author, server) {
-    server.createList('post', 100, { author });
-  }
-});
+//we'll pass the attrs in at creation time
+export default Factory.extend({});

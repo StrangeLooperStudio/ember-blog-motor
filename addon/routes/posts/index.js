@@ -5,6 +5,6 @@ export default Route.extend({
   store: service(),
 
   model() {
-    return this.get('store').query('post', { page: { nuber: 1, size: 10 } });
+    return this.get('store').query('post', { isPublished: true, page: { nuber: 1, size: 10 } });
   }
 });

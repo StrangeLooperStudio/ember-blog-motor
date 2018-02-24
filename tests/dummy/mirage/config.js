@@ -1,3 +1,5 @@
+import moment from 'moment';
+
 export default function() {
 
   // These comments are here to help you get started. Feel free to delete them.
@@ -31,9 +33,21 @@ export default function() {
     const { number, size } = request.queryParams['page'] || defaultPage;
     const startIndex = (number - 1) * size;
 
-    const sortedPosts = posts.all().sort((a,b)=>a.publishedAt <= b.publishedAt)
+    const allPosts = posts.all();
+
+    const filteredPosts =  request.queryParams['isPublished'] ?
+      allPosts.filter(p => p.isPublished) :
+      allPosts;
+
+    const sortedPosts = filteredPosts.sort((a, b) =>
+     moment(a.attrs.publishedAt).isBefore(moment(b.attrs.publishedAt)) ?
+     1 : -1);
+
     let paginatedPosts = this.serialize(sortedPosts.slice(startIndex, size));
-    paginatedPosts.meta = { page: { number, size } };
+    paginatedPosts.meta = {
+      page: { number, size },
+      count: allPosts.length
+    };
 
     return paginatedPosts;
   });

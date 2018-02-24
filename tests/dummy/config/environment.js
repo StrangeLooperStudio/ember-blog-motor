@@ -21,6 +21,7 @@ module.exports = function(environment) {
       // Here you can pass flags/options to your application instance
       // when it is created
       EmberBlogMotor: {
+        authorNameField: 'name',
         title: 'Ember-Blog-Motor (An Engine Addon)',
         adminTitle: 'Ember-Blog-Motor-Admin (An Engine In-Repo-Addon (Inside an Addon))',
         dateFormat: 'L',
