@@ -1,4 +1,8 @@
-<h2>{{config.adminTitle}}</h2>
+{{#if config.showAdminTitle}}
+  <h2>{{config.adminTitle}}</h2>
+{{/if}}
+
+{{#if config.showAdminNav}}
 <nav>
   <ul>
     <li>
@@ -9,4 +13,6 @@
     </li>
   </ul>
 </nav>
+{{/if}}
+
 {{outlet}}

@@ -1,0 +1,7 @@
+<ul>
+  <li>{{#link-to link (query-params page=1 size=size)}}First{{/link-to}}</li>
+  {{#each pageLinks as |pageLink|}}
+    <li>{{#link-to link (query-params page=pageLink size=size)}}{{pageLink}}{{/link-to}}</li>
+  {{/each}}
+  <li>{{#link-to link (query-params page=lastPage size=size)}}Last{{/link-to}}</li>
+</ul>

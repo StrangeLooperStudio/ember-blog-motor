@@ -22,8 +22,12 @@ module.exports = function(environment) {
       // when it is created
       EmberBlogMotor: {
         authorNameField: 'name',
+        showTitle: true,
         title: 'Ember-Blog-Motor (An Engine Addon)',
+        showNav: true,
+        showAdminTitle: true,
         adminTitle: 'Ember-Blog-Motor-Admin (An Engine In-Repo-Addon (Inside an Addon))',
+        showAdminNav: true,
         dateFormat: 'L',
         links: {
           blogHome: 'Blog Home',

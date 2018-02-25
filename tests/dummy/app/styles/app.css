@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   max-width: 80vw;
   margin: auto;
@@ -10,6 +14,10 @@ a {
   color: #865931;
 }
 
+a.active {
+  color: #ccc;
+}
+
 a:hover {
   color: #dd6a58;
 }
@@ -18,6 +26,7 @@ h1,h2 {
   background-color: #E04E39;
   color: white;
   padding: 1rem;
+  margin: 0 auto;
 }
 
 input, textarea {
@@ -29,6 +38,21 @@ textarea {
   height: 10rem;
 }
 
+ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+nav > ul > li {
+  margin-right: 2rem;
+  padding: 1rem 1rem 1rem 0;
+}
+
+
+
 .post-entry {
   margin: 1rem auto;
 }
@@ -38,4 +62,47 @@ textarea {
   color: black;
   font-size: 1.5rem;
   font-weight: bold;
+  padding: 0;
+}
+
+.post-entry > footer {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.post-entry > footer > ul {
+  width: 80%;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.post-list {
+  flex-direction: column;
+  width: 100%;
+  padding-right: 1rem;
+}
+
+.post-summary {
+  display: inline-flex;
+  justify-content: space-between;
+  margin-right: 0;
+  width: 100%;
+}
+
+.post-summary *:first-child {
+  flex: 2;
+}
+
+.post-summary * {
+  flex: 1;
+  margin: 0 1rem 1rem 0;
+}
+
+.post-summary *:last-child {
+  margin-right: 0;
+  text-align: right;
+}
+
+.pagination-links > ul {
+  justify-content: space-around;
 }

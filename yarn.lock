@@ -2692,13 +2692,6 @@ ember-cli@~3.1.0-beta.1:
     watch-detector "^0.1.0"
     yam "^0.0.24"
 
-ember-config-service@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/ember-config-service/-/ember-config-service-0.2.0.tgz#7c82075265be87320796818156a63650a42a57e3"
-  dependencies:
-    ember-cli-babel "^6.6.0"
-    ember-getowner-polyfill "2.2.0"
-
 ember-data@~3.1.0-beta.1:
   version "3.1.0-beta.1"
   resolved "https://registry.yarnpkg.com/ember-data/-/ember-data-3.1.0-beta.1.tgz#84685efdb43438e9e7f51a39ef0825e9a67f012f"
@@ -2780,7 +2773,7 @@ ember-get-config@^0.2.2, ember-get-config@^0.2.4:
     broccoli-file-creator "^1.1.1"
     ember-cli-babel "^6.3.0"
 
-ember-getowner-polyfill@2.2.0, ember-getowner-polyfill@^2.0.1:
+ember-getowner-polyfill@^2.0.1:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/ember-getowner-polyfill/-/ember-getowner-polyfill-2.2.0.tgz#38e7dccbcac69d5ec694000329ec0b2be651d2b2"
   dependencies:
@@ -2904,6 +2897,12 @@ ember-source@~3.1.0-beta.1:
     inflection "^1.12.0"
     jquery "^3.3.1"
     resolve "^1.5.0"
+
+ember-truth-helpers@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/ember-truth-helpers/-/ember-truth-helpers-2.0.0.tgz#f3e2eef667859197f1328bb4f83b0b35b661c1ac"
+  dependencies:
+    ember-cli-babel "^6.8.2"
 
 ember-try-config@^2.2.0:
   version "2.2.0"

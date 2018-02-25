@@ -28,10 +28,11 @@ export default function() {
   //this.namespace = 'api';
   this.get('/users/:id');
   this.get('/posts', function({ posts }, request) {
-    const defaultPage = { number: 1, size: 10 };
+    const page = parseInt(request.queryParams['page'], 10) || 1;
+    const size = parseInt(request.queryParams['size'], 10) || 10;
 
-    const { number, size } = request.queryParams['page'] || defaultPage;
-    const startIndex = (number - 1) * size;
+    const startIndex = (page - 1) * size;
+    const endIndex = startIndex + size;
 
     const allPosts = posts.all();
 
@@ -43,10 +44,10 @@ export default function() {
      moment(a.attrs.publishedAt).isBefore(moment(b.attrs.publishedAt)) ?
      1 : -1);
 
-    let paginatedPosts = this.serialize(sortedPosts.slice(startIndex, size));
+    let paginatedPosts = this.serialize(sortedPosts.slice(startIndex, endIndex));
     paginatedPosts.meta = {
-      page: { number, size },
-      count: allPosts.length
+      pagination: { page, size },
+      count: filteredPosts.length
     };
 
     return paginatedPosts;

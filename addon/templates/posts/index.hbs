@@ -1,1 +1,19 @@
-{{post-list posts=model}}
+<header>
+  <ul class="post-list">
+    <li class="post-summary">
+      <h5>Title</h5>
+      <h5>Date</h5>
+    </li>
+  </ul>
+</header>
+
+<section>
+  {{post-list posts=model}}
+</section>
+
+<footer>
+  {{pagination-links link="posts.index"
+    size=model.meta.pagination.size
+    page=model.meta.pagination.page
+    count=model.meta.count}}
+</footer>

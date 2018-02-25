@@ -2,12 +2,6 @@ import moment from 'moment';
 
 export default function(server) {
 
-  /*
-    Seed your development database using your factories.
-    This data will not be loaded in your tests.
-  */
-
-  // server.createList('post', 10);
   server.loadFixtures('users');
 
   let alice = server.create('user', { isAdmin: true, email: 'alice@ebm.com', name: 'Admin Alice'});
@@ -15,7 +9,6 @@ export default function(server) {
 
   for(let i=0; i<99; i++) {
     let author = i%2 ? alice : bob;
-
     server.create('post', { author });
   }
 

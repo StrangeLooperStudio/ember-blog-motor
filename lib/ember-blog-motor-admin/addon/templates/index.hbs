@@ -1,2 +1,17 @@
-<h3>Post List</h3>
+<header>
+  <ul class="post-list">
+    <li class="post-summary">
+      <h5>Title</h5>
+      <h5>Author</h5>
+      <h5>Published</h5>
+      <h5>Date</h5>
+    </li>
+  </ul>
+</header>
 {{post-list posts=model}}
+<footer>
+  {{pagination-links link="index"
+    size=model.meta.pagination.size
+    page=model.meta.pagination.page
+    count=model.meta.count}}
+</footer>

@@ -5,7 +5,11 @@ export default Route.extend({
   store: service(),
 
   model(params) {
-    return this.get('store').findRecord('post', params.post_id );
-    
+    const post = this.get('store').findRecord('post', params.post_id );
+
+    if(!post.get('isPublished')){
+      this.transitionTo('posts.index');
+    }
+
   }
 });
