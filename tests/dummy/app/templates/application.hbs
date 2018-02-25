@@ -1,13 +1,29 @@
-<h1 id="title">Welcome to Ember-Blog-Motor - Dummy App</h1>
-<nav>
-  <ul>
-    <li>
-      {{#link-to "index"}}Dummy Index{{/link-to}}
-    </li>
-    <li>
-      {{#link-to "ember-blog-motor.index"}}Blog{{/link-to}}
-    </li>
-  </ul>
-</nav>
+<header>
+  <h1 id="title">Welcome to Ember-Blog-Motor - Dummy App</h1>
+  <nav>
+    <ul>
+      <li>
+        {{#link-to "index"}}Dummy Index{{/link-to}}
+      </li>
+      <li>
+        {{#link-to "ember-blog-motor.index"}}Blog{{/link-to}}
+      </li>
+      {{#if session.isAdmin}}
+      <li>
+        {{#link-to "authenticated.ember-blog-motor-admin.index"}}Admin{{/link-to}}
+      </li>
+      {{/if}}
+      <li>
+        {{#if session.isAuthenticated}}
+          <a {{action 'invalidateSession'}}>Logout</a>
+        {{else}}
+          {{#link-to 'login'}}Login{{/link-to}}
+        {{/if}}
+      </li>
+    </ul>
+  </nav>
+</header>
 
-{{outlet}}
+<section>
+  {{outlet}}
+</section>

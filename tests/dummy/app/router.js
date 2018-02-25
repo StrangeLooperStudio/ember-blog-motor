@@ -8,6 +8,12 @@ const Router = EmberRouter.extend({
 
 Router.map(function() {
   this.mount('ember-blog-motor', { path: '/blog' });
+  this.route('authenticated', { path: '' }, function() {
+    this.mount('ember-blog-motor-admin', { path: '/admin' });
+  });
+
+  this.route('index', { path: '/' });
+  this.route('login');
 });
 
 export default Router;

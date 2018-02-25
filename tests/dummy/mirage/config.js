@@ -26,6 +26,12 @@ export default function() {
     http://www.ember-cli-mirage.com/docs/v0.3.x/shorthands/
   */
   //this.namespace = 'api';
+  this.post('/token', function(_, request) {
+    const username = request.requestBody.split("&").find(s => s.startsWith('username')).split('=')[1]
+    const isAlice = username === 'alice' ? true : false;
+    return { access_token: 'test123', isAdmin: isAlice, user_id: isAlice ? 1 : 2 };
+  });
+
   this.get('/users/:id');
   this.get('/posts', function({ posts }, request) {
     const page = parseInt(request.queryParams['page'], 10) || 1;
