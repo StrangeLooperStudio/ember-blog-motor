@@ -3,7 +3,10 @@
 module.exports = function(environment) {
   const ENV = {
     modulePrefix: 'ember-blog-motor',
-    environment: environment
+    environment: environment,
+    showdown: {
+      emoji: true
+    }
   }
 
   return ENV;

@@ -1,4 +1,5 @@
 import DS from 'ember-data';
+import { computed } from '@ember/object';
 import config from 'ember-get-config';
 
 export default DS.Model.extend({
@@ -12,5 +13,9 @@ export default DS.Model.extend({
 
   author: DS.belongsTo(config.APP.EmberBlogMotor.authorModel),
   nextPost: DS.belongsTo('post', {inverse: 'previousPost'}),
-  previousPost: DS.belongsTo('post', {inverse: 'nextPost'})
+  previousPost: DS.belongsTo('post', {inverse: 'nextPost'}),
+
+  post_slug: computed('title', 'id', function() {
+    return `${this.title}-${this.id}`;
+  })
 });

@@ -3,7 +3,7 @@
   <h3 class="post-entry__author">{{post.author.name}}</h3>
   <h3 class="post-entry__published-date-time">{{moment-format post.publishedAt dateFormat}}</h3>
 </header>
-<section>{{post.body}}</section>
+<section>{{markdown-to-html post.body}}</section>
 <footer>
   <ul>
     <li>
