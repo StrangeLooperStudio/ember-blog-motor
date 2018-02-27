@@ -39,7 +39,7 @@ h1,h2 {
   margin: 0 auto;
 }
 
-nav > ul {
+nav > ul, footer > ul {
   display: flex;
   list-style: none;
   padding: 0;
@@ -72,7 +72,6 @@ nav > ul > li {
 }
 
 .post-entry > footer > ul {
-  width: 80%;
   margin: 0 auto;
   justify-content: space-between;
 }
@@ -81,6 +80,7 @@ nav > ul > li {
   flex-direction: column;
   width: 100%;
   padding-right: 1rem;
+  padding-left: 0;
 }
 
 .post-summary {
