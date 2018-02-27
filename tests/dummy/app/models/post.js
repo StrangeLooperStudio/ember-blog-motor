@@ -8,7 +8,6 @@ export default DS.Model.extend({
   publishedAt: DS.attr('date'),
   createdAt: DS.attr('date'),
   updatedAt: DS.attr('date'),
-  //meta: DS.attr(),
 
   author: DS.belongsTo(config.APP.EmberBlogMotor.authorModel),
   nextPost: DS.belongsTo('post', {inverse: 'previousPost'}),
