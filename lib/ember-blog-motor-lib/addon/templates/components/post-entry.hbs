@@ -8,12 +8,12 @@
   <ul>
     <li>
       {{#if post.previousPost}}
-        {{#link-to "posts.show" post.previousPost}}Previous{{/link-to}}
+        {{#link-to "posts.show" post.previousPost.post_slug}}Previous{{/link-to}}
       {{/if}}
     </li>
     <li>
       {{#if post.nextPost}}
-        {{#link-to "posts.show" post.nextPost}}Next{{/link-to}}
+        {{#link-to "posts.show" post.nextPost.post_slug}}Next{{/link-to}}
       {{/if}}
     </li>
   </ul>

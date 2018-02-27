@@ -1,2 +1,2 @@
-<div>{{#link-to "posts.show" post}}{{post.title}}{{/link-to}}</div>
+<div>{{#link-to "posts.show" post.post_slug}}{{post.title}}{{/link-to}}</div>
 <div>{{moment-format post.publishedAt dateFormat}}</div>

@@ -1,7 +1,1 @@
-import Controller from '@ember/controller';
-
-export default Controller.extend({
-  queryParams: ['page', 'size'],
-  page: 1,
-  size: 10
-})
+export { default } from 'ember-blog-motor-lib/controllers/post-list';
