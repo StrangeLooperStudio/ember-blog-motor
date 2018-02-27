@@ -33,6 +33,7 @@ export default function() {
   });
 
   this.get('/users/:id');
+
   this.get('/posts', function({ posts }, request) {
     const page = parseInt(request.queryParams['page'], 10) || 1;
     const size = parseInt(request.queryParams['size'], 10) || 10;
@@ -58,8 +59,35 @@ export default function() {
 
     return paginatedPosts;
   });
-  this.post('/posts')
-  this.get('/posts/:id')
-  this.put('/posts/:id')
+
+  this.post('/posts', function({ posts }, request) {
+    let id = request.params.id;
+    let attrs = this.normalizedRequestAttrs();
+
+    attrs.createdAt = new Date();
+    attrs.updatedAt = new Date();
+
+    if(attrs.isPublished) {
+      attrs.publishedAt = new Date();
+    }
+
+    return posts.find(id).update(attrs);
+  });
+
+  this.get('/posts/:id');
+
+  this.patch('/posts/:id', function({ posts }, request) {
+    let id = request.params.id;
+    let attrs = this.normalizedRequestAttrs();
+    let post = posts.find(id);
+
+    if(!post.isPublished && attrs.isPublished) {
+      attrs.publishedAt = new Date();
+    }
+
+    attrs.updatedAt = new Date();
+
+    return post.update(attrs);
+  });
   this.del('/posts/:id')
 }

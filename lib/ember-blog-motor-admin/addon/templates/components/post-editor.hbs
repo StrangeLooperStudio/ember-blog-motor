@@ -1,15 +1,43 @@
-<h3>New</h3>
-<div class="post-editor">
-  <div class="post-editor__editor">
-    Author: {{post.author.name}}<br/>
-    Title:<br/>
-    {{input value=post.title}}<br />
-    Body:<br/>
-    {{textarea value=post.body}}<br/>
-    Published: {{post.publishedAt}}
-  </div>
-  <div class="post-editor__preview">
+<header>
+  <h3>New</h3>
+</header>
+<section>
+  <nav>
+    <ul>
+      <li class="{{if isEditor "active"}}"><a href="#" {{action (mut isEditor) true}}>Editor</a></li>
+      <li class="{{unless isEditor "active"}}"><a href="#" {{action (mut isEditor) false}}>Preview</a></li>
+    </ul>
+  </nav>
+</section>
+{{#if isEditor}}
+  <section class="post-editor__editor">
+    <form>
+      <fieldset>
+        <section><span>Author:</span><span>{{post.author.name}}</span></section>
+        <section><label for="title-input">Title:</label>{{input id="title-input" value=post.title}}</section>
+        <section>
+          <label for="post-body">Post:</label>
+          <div>
+            {{textarea id="post-body" value=post.body}}<br/>
+            Markdown Supported: <a href="https://github.com/showdownjs/showdown/wiki/Showdown's-Markdown-syntax" target="top">Syntax</a>
+          </div>
+        </section>
+        <section>
+          <label for="published">Published:</label>
+          <span>{{input id="published" type="checkbox" checked=post.isPublished}}</span>
+        </section>
+      </fieldset>
+      <fieldset>
+        <section>
+          <button {{action cancel}}>Cancel</button>
+          <button {{action save}}>Save</button>
+        </section>
+      </fieldset>
+    </form>
+  </section>
+{{else}}
+  <section class="post-editor__preview">
     <h3>{{post.title}}</h3>
     {{markdown-to-html post.body}}
-  </div>
-</div>
+  </section>
+{{/if}}

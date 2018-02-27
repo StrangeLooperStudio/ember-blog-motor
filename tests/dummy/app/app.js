@@ -19,7 +19,8 @@ const App = Application.extend({
     emberBlogMotorAdmin: {
       dependencies: {
         services: [
-          'store'
+          'store',
+          'session'
         ]
       }
     }
