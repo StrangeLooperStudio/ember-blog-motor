@@ -32,7 +32,7 @@ button {
   background-color: #E04E39;
 }
 
-h1,h2 {
+header > h1, header > h2 {
   background-color: #E04E39;
   color: white;
   padding: 1rem;
