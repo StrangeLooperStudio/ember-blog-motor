@@ -58,12 +58,23 @@ nav > ul > li {
   margin: 1rem auto;
 }
 
+.post-entry header {
+  display: inline-flex;
+  width: 100%;
+  align-items: baseline;
+}
+
+.post-entry header > * {
+  flex: 1 1;
+  margin: 0 1rem 0 0;
+  padding: 0;
+}
 .post-entry header h2 {
   background-color:inherit;
   color: black;
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: bold;
-  padding: 0;
+  flex: 2 1;
 }
 
 .post-entry > footer {
