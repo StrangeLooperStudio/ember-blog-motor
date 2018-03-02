@@ -1,4 +1,4 @@
-import { module, test, only } from 'qunit';
+import { module, test } from 'qunit';
 import { currentURL } from '@ember/test-helpers';
 import { setupApplicationTest } from 'ember-qunit';
 import single from 'dummy/mirage/scenarios/single-post';

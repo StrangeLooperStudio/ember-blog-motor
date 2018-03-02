@@ -2,8 +2,7 @@ import {
   create,
   visitable,
   fillable,
-  clickable,
-  property
+  clickable
 } from 'ember-cli-page-object';
 
 export default create({

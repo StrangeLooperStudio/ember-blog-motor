@@ -1,5 +1,5 @@
 import { module, test } from 'qunit';
-import { visit, currentURL } from '@ember/test-helpers';
+import {  currentURL } from '@ember/test-helpers';
 import { setupApplicationTest } from 'ember-qunit';
 import admin from 'dummy/tests/pages/admin';
 import single from 'dummy/mirage/scenarios/single-post';

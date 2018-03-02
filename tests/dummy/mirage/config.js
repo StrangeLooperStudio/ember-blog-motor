@@ -28,8 +28,8 @@ export default function() {
   //this.namespace = 'api';
   this.post('/token', function(_, request) {
     const username = request.requestBody.split("&").find(s => s.startsWith('username')).split('=')[1]
-    const isAlice = username === 'alice' ? true : false;
-    return { access_token: 'test123', isAdmin: isAlice, user_id: isAlice ? 1 : 2 };
+    const isAdmin = username === 'admin' ? true : false;
+    return { access_token: 'test123', isAdmin: isAdmin, user_id: isAdmin ? 1 : 2 };
   });
 
   this.get('/users/:id');
