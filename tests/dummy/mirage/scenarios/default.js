@@ -1,8 +1,16 @@
 import moment from 'moment';
 
-export default function(server) {
+// export default function(server) {
+//
+//   let author = server.create('user', { isAdmin: true, email: 'alice@ebm.com', name: 'Admin Alice'});
+//
+//   server.create('post', { author, isPublished: true });
+//
+//   window.server = server;
+// }
 
-  server.loadFixtures('users');
+
+export default function(server) {
 
   let alice = server.create('user', { isAdmin: true, email: 'alice@ebm.com', name: 'Admin Alice'});
   let bob = server.create('user', { id: 2, isAdmin: false, email: 'bob@ebm.com', name: 'Bob' });

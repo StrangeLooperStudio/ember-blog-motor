@@ -2539,9 +2539,9 @@ ember-cli-lodash-subset@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/ember-cli-lodash-subset/-/ember-cli-lodash-subset-2.0.1.tgz#20cb68a790fe0fde2488ddfd8efbb7df6fe766f2"
 
-ember-cli-mirage@mattmarcum/ember-cli-mirage#patch-1:
-  version "0.4.1"
-  resolved "https://codeload.github.com/mattmarcum/ember-cli-mirage/tar.gz/19b097550627e2027037b2593be7fb4548e83d18"
+ember-cli-mirage@mattmarcum/ember-cli-mirage#patch-2:
+  version "0.4.2"
+  resolved "https://codeload.github.com/mattmarcum/ember-cli-mirage/tar.gz/023d2eca621b32cd1b7c77dd5f2ea16d7f400365"
   dependencies:
     broccoli-funnel "^1.0.2"
     broccoli-merge-trees "^1.1.0"

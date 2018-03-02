@@ -8,8 +8,7 @@ module('Acceptance | blog', function(hooks) {
   setupApplicationTest(hooks);
 
   test('visiting /blog', async function(assert) {
-    defaultScenario(window.server);
-
+    defaultScenario(this.server);
     await page.visit();
 
     assert.equal(currentURL(), '/blog');
@@ -18,8 +17,7 @@ module('Acceptance | blog', function(hooks) {
   });
 
   test('visiting previous blog post', async function(assert) {
-    defaultScenario(window.server);
-
+    defaultScenario(this.server);
     await page.visit();
     await page.previousLink();
 

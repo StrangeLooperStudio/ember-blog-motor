@@ -20,6 +20,10 @@ module.exports = function(environment) {
     showdown: {
       emoji: true
     },
+    
+    'ember-cli-mirage': {
+      autostart: true
+    },
 
     APP: {
       // Here you can pass flags/options to your application instance

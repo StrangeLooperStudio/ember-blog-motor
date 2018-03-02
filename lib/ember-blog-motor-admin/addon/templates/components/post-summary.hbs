@@ -1,4 +1,4 @@
 <div>{{#link-to "posts.edit" post}}{{post.title}}{{/link-to}}</div>
 <div>{{post.author.name}}</div>
-<div>{{post.isPublished}}</div>
+<div data-test-is-published>{{post.isPublished}}</div>
 <div>{{moment-format post.publishedAt dateFormat}}</div>
