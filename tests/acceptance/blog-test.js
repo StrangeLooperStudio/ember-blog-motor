@@ -2,13 +2,13 @@ import { module, test } from 'qunit';
 import { currentURL } from '@ember/test-helpers';
 import { setupApplicationTest } from 'ember-qunit';
 import page from 'dummy/tests/pages/blog';
-import defaultScenario from 'dummy/mirage/scenarios/default';
+import scenario from 'dummy/mirage/scenarios/hundred-posts';
 
 module('Acceptance | blog', function(hooks) {
   setupApplicationTest(hooks);
 
   test('visiting /blog', async function(assert) {
-    defaultScenario(this.server);
+    scenario(this.server);
     await page.visit();
 
     assert.equal(currentURL(), '/blog');
@@ -17,7 +17,7 @@ module('Acceptance | blog', function(hooks) {
   });
 
   test('visiting previous blog post', async function(assert) {
-    defaultScenario(this.server);
+    scenario(this.server);
     await page.visit();
     await page.previousLink();
 
