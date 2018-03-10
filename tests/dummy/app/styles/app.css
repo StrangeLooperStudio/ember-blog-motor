@@ -12,6 +12,15 @@ body {
   font-family: sans-serif;
 }
 
+pre {
+  padding: 1rem;
+  background-color: white;
+}
+
+code {
+  background-color: white;
+}
+
 a {
   text-decoration: none;
   color: #865931;

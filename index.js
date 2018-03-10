@@ -15,6 +15,10 @@ module.exports = EngineAddon.extend({
 
   config() {
     return {
+      showdown: {
+        emoji: true,
+        ghCodeBlocks: true
+      },
       EmberBlogMotor: {
         sessionService: 'session',
         authorModel: 'user',
