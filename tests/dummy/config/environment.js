@@ -42,8 +42,8 @@ module.exports = function(environment) {
         admin: 'Admin',
         adminAllPosts: 'Blog Posts',
         adminNew: 'Create New Post',
-        previous: 'Previous',
-        next: 'Next'
+        previous: 'Next',
+        next: 'Previous'
       }
     },
 
