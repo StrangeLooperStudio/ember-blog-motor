@@ -1,0 +1,24 @@
+{{#if showHeader}}
+  <header>
+    {{#if config.showAdminTitle}}
+      <h2>{{config.adminTitle}}</h2>
+    {{/if}}
+
+    {{#if config.showAdminNav}}
+    <nav>
+      <ul>
+        <li>
+          {{#link-to 'index'}}{{config.links.adminAllPosts}}{{/link-to}}
+        </li>
+        <li>
+          {{#link-to 'posts.new'}}{{config.links.adminNew}}{{/link-to}}
+        </li>
+      </ul>
+    </nav>
+    {{/if}}
+  </header>
+{{/if}}
+
+<section>
+  {{outlet}}
+</section>

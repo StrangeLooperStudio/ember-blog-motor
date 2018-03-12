@@ -1,0 +1,173 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+body {
+  max-width: 80vw;
+  margin: auto;
+  background-color: #FFFDF9;
+  font-family: sans-serif;
+}
+
+pre {
+  padding: 1rem;
+  background-color: white;
+}
+
+code {
+  background-color: white;
+}
+
+a {
+  text-decoration: none;
+  color: #865931;
+}
+
+a.active {
+  color: #F88;
+}
+
+a:hover {
+  color: #dd6a58;
+}
+
+button {
+  border: 0;
+  padding: 0.5rem;
+  color: white;
+  background-color: #E04E39;
+}
+
+header > h1, header > h2 {
+  background-color: #E04E39;
+  color: white;
+  padding: 1rem;
+  margin: 0 auto;
+}
+
+nav > ul, footer > ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+nav > ul > li {
+  margin-right: 2rem;
+  padding: 1rem 1rem 1rem 0;
+}
+
+
+
+.post-entry {
+  margin: 1rem auto;
+}
+
+.post-entry header {
+  display: inline-flex;
+  width: 100%;
+  align-items: baseline;
+}
+
+.post-entry header > * {
+  flex: 1 1;
+  margin: 0 1rem 0 0;
+  padding: 0;
+}
+.post-entry header h2 {
+  background-color:inherit;
+  color: black;
+  font-size: 2rem;
+  font-weight: bold;
+  flex: 2 1;
+}
+
+.post-entry > footer {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.post-entry > footer > ul {
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.post-list {
+  flex-direction: column;
+  width: 100%;
+  padding-right: 1rem;
+  padding-left: 0;
+}
+
+.post-summary {
+  display: inline-flex;
+  justify-content: space-between;
+  margin-right: 0;
+  width: 100%;
+}
+
+.post-summary *:first-child {
+  flex: 2;
+}
+
+.post-summary * {
+  flex: 1;
+  margin: 0 1rem 1rem 0;
+}
+
+.post-summary *:last-child {
+  margin-right: 0;
+  text-align: right;
+}
+
+.pagination-links > ul {
+  justify-content: space-around;
+}
+
+.post-editor__editor fieldset {
+  display: flex;
+  flex-direction:row;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.post-editor__editor fieldset:first-of-type {
+  flex-direction: column;
+}
+
+.post-editor__editor fieldset section {
+  display: inline-flex;
+  width: 100%;
+  margin: 16px 0;
+}
+
+.post-editor__editor fieldset section > *:first-child {
+  flex-basis: 80px;
+  margin-right: 5px;
+}
+
+.post-editor__editor fieldset section > *:last-child {
+  flex-grow: 2;
+}
+
+.post-editor__editor fieldset:last-of-type section {
+  justify-content: flex-end;
+}
+
+.post-editor__editor fieldset section:last-of-type > *:last-child {
+  flex-grow: 0;
+}
+
+.post-editor__editor input[type="checkbox"] {
+  margin-top: 3px;
+}
+
+.post-editor__editor textarea {
+  height: 10rem;
+  width: 100%;
+}

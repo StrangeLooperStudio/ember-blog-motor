@@ -1,0 +1,20 @@
+<header>
+  <h2 data-test-title>{{post.title}}</h2>
+  <h3 data-test-author class="post-entry__author">{{post.author.name}}</h3>
+  <h3 data-test-date class="post-entry__published-date-time">{{moment-format post.publishedAt dateFormat}}</h3>
+</header>
+<section data-test-body>{{markdown-to-html post.body}}</section>
+<footer>
+  <ul>
+    <li data-test-previous>
+      {{#if post.previousPost}}
+        {{#link-to "posts.show" post.previousPost.post_slug}}{{prevText}}{{/link-to}}
+      {{/if}}
+    </li>
+    <li data-test-next>
+      {{#if post.nextPost}}
+        {{#link-to "posts.show" post.nextPost.post_slug}}{{nextText}}{{/link-to}}
+      {{/if}}
+    </li>
+  </ul>
+</footer>

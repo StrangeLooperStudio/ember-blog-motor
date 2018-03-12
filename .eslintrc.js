@@ -1,4 +1,7 @@
 module.exports = {
+  globals: {
+    server: true,
+  },
   root: true,
   parserOptions: {
     ecmaVersion: 2017,
@@ -29,6 +32,7 @@ module.exports = {
       excludedFiles: [
         'app/**',
         'addon/**',
+        'lib/**',
         'tests/dummy/app/**'
       ],
       parserOptions: {

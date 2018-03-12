@@ -17,9 +17,40 @@ module.exports = function(environment) {
       }
     },
 
+    showdown: {
+      emoji: true
+    },
+
+    'ember-cli-mirage': {
+      autostart: true
+    },
+
+    EmberBlogMotor: {
+      sessionService: 'session',
+      authorModel: 'user',
+      authorNameField: 'name',
+      showTitle: true,
+      title: 'Ember-Blog-Motor (An Engine Addon)',
+      showNav: true,
+      showAdminTitle: true,
+      adminTitle: 'Ember-Blog-Motor-Admin (An Engine In-Repo-Addon)',
+      showAdminNav: true,
+      dateFormat: 'L',
+      links: {
+        blogHome: 'Blog Home',
+        allBlogPosts: 'Blog Posts',
+        admin: 'Admin',
+        adminAllPosts: 'Blog Posts',
+        adminNew: 'Create New Post',
+        previous: 'Next',
+        next: 'Previous'
+      }
+    },
+
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+
     }
   };
 

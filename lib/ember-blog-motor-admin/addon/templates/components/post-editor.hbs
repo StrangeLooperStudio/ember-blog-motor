@@ -1,0 +1,43 @@
+<header>
+  <h3>New</h3>
+</header>
+<section>
+  <nav>
+    <ul>
+      <li data-test-editor class="{{if isEditor "active"}}"><a href="#" {{action (mut isEditor) true}}>Editor</a></li>
+      <li data-test-preview class="{{unless isEditor "active"}}"><a href="#" {{action (mut isEditor) false}}>Preview</a></li>
+    </ul>
+  </nav>
+</section>
+{{#if isEditor}}
+  <section class="post-editor__editor">
+    <form>
+      <fieldset>
+        <section><span>Author:</span><span data-test-author>{{post.author.name}}</span></section>
+        <section data-test-title><label for="title-input">Title:</label>{{input id="title-input" value=post.title}}</section>
+        <section>
+          <label for="post-body">Post:</label>
+          <div data-test-body>
+            {{textarea id="post-body" value=post.body}}<br/>
+            Markdown Supported: <a href="https://github.com/showdownjs/showdown/wiki/Showdown's-Markdown-syntax" target="top">Syntax</a>
+          </div>
+        </section>
+        <section>
+          <label for="published">Published:</label>
+          <span data-test-is-published>{{input id="published" type="checkbox" checked=post.isPublished}}</span>
+        </section>
+      </fieldset>
+      <fieldset>
+        <section>
+          <button data-test-cancel {{action cancel}}>Cancel</button>
+          <button data-test-save {{action save}}>Save</button>
+        </section>
+      </fieldset>
+    </form>
+  </section>
+{{else}}
+  <section data-test-preview-pane class="post-editor__preview">
+    <h3>{{post.title}}</h3>
+    {{markdown-to-html post.body}}
+  </section>
+{{/if}}
