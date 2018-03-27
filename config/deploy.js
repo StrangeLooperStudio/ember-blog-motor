@@ -4,7 +4,9 @@
 module.exports = function(deployTarget) {
   let ENV = {
     build: {},
-    gitRemoteUrl: "https://github.com/StrangeLooperStudio/ember-blog-motor"
+    ghpages: {
+      gitRemoteUrl: "https://github.com/StrangeLooperStudio/ember-blog-motor"
+    }
     // include other plugin configuration that applies to all deploy targets here
   };
 
