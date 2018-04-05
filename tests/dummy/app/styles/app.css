@@ -79,6 +79,11 @@ nav > ul > li {
   margin: 0 1rem 0 0;
   padding: 0;
 }
+
+.post-entry header > *:last-child {
+  text-align: right;
+}
+
 .post-entry header h2 {
   background-color:inherit;
   color: black;

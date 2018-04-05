@@ -2,7 +2,7 @@ export default [
   {
     id: 2,
     title: "Config",
-    body: "Ember-blog-motor is fully configurable via your app's `config.environment.js`.\
+    body: "Ember-blog-motor is fully configurable via your app's `config/environment.js`.\
     All of our configs are stored under the `EmberBlogMotor` key.  If you want to\
     see the defaults you can always look at this addon's index.js#config hook.\n\n\n\
 ```\n\
