@@ -32,7 +32,7 @@ EmberBlogMotor: {\n\
     isPublished: true,
     createdAt: "2018-03-02T00:00:00",
     updatedAt: "2018-03-02T00:00:00",
-    publishedAt: "2018-03-02T00:00:01",
+    publishedAt: "2018-03-02T00:00:00",
     authorId: 1,
     nextPostId: 1,
     previousPostId: null
@@ -54,7 +54,7 @@ EmberBlogMotor: {\n\
     isPublished: true,
     createdAt: "2018-03-02T00:00:00",
     updatedAt: "2018-03-02T00:00:00",
-    publishedAt: "2018-03-02T00:00:00",
+    publishedAt: "2018-03-02T00:00:01",
     authorId: 1,
     nextPostId: null,
     previousPostId: 2

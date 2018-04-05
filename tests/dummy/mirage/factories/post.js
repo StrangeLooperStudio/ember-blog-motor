@@ -6,5 +6,5 @@ export default Factory.extend({
   isPublished() { return faker.random.boolean(); },
   createdAt() { return faker.date.past(); },
   updatedAt() { return faker.date.past(); },
-  publishedAt() { return faker.date.past(); },
+  publishedAt() { return faker.date.between('2016-01-01', '2018-03-01'); },
 });

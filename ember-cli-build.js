@@ -1,4 +1,5 @@
 'use strict';
+const config = require('./tests/dummy/config/environment')();
 
 const EmberAddon = require('ember-cli/lib/broccoli/ember-addon');
 
@@ -7,7 +8,7 @@ module.exports = function(defaults) {
     // Add options here
     assetLoader: {
       generateURI: function(filePath) {
-        return `/ember-blog-motor${filePath}`;
+        return `${config.rootURL}${filePath}`;
       }
     }
   });
